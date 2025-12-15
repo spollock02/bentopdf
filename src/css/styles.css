@@ -17,6 +17,165 @@
 @import 'cropperjs/dist/cropper.css';
 @import 'tailwindcss';
 
+/* 
+  CONSTELLATION THEME OVERRIDES 
+  Inverting Dark Mode to Light Mode & Applying Reason Green
+*/
+:root {
+  --reason-green: #1C4D38;
+  /* 156 44% 20% */
+  --reason-green-light: #306E55;
+  --reason-green-lighter: #E7F6F0;
+  --reason-bg: #F8FAFC;
+  --reason-text: #1F2937;
+  --reason-text-muted: #6B7280;
+}
+
+body {
+  background-color: var(--reason-bg) !important;
+  color: var(--reason-text) !important;
+}
+
+/* Background Overrides - Flip Dark to Light */
+.bg-gray-800,
+.bg-gray-900,
+.bg-gray-850 {
+  background-color: white !important;
+  border-color: #E5E7EB !important;
+  /* gray-200 */
+  color: var(--reason-text) !important;
+}
+
+/* Specific component fixes for the new light background */
+nav.bg-gray-800 {
+  background-color: white !important;
+  border-bottom: 1px solid #E5E7EB !important;
+}
+
+/* Ensure cards have a shadow/border in light mode to stand out */
+.tool-card,
+.bg-gray-800.rounded-lg,
+.testimonial-card,
+.bg-gray-800.rounded-xl {
+  border: 1px solid #E5E7EB !important;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1) !important;
+}
+
+/* Text Overrides - Flip White to Dark */
+.text-white {
+  color: var(--reason-text) !important;
+}
+
+.text-gray-300,
+.text-gray-400 {
+  color: var(--reason-text-muted) !important;
+}
+
+.text-gray-200 {
+  color: #374151 !important;
+  /* gray-700 */
+}
+
+/* Brand Color Overrides - Indigo to Reason Green */
+.text-indigo-400,
+.text-indigo-300,
+.text-indigo-500 {
+  color: var(--reason-green) !important;
+}
+
+.bg-indigo-600,
+.bg-indigo-500,
+.bg-indigo-900 {
+  background-color: var(--reason-green) !important;
+}
+
+.bg-indigo-900 {
+  background-color: var(--reason-green-lighter) !important;
+  color: var(--reason-green) !important;
+  border-color: var(--reason-green-light) !important;
+}
+
+.border-indigo-400,
+.border-indigo-500,
+.border-indigo-600 {
+  border-color: var(--reason-green) !important;
+}
+
+.hover\:bg-indigo-700:hover {
+  background-color: var(--reason-green-light) !important;
+}
+
+.focus\:ring-indigo-500:focus {
+  --tw-ring-color: var(--reason-green) !important;
+}
+
+/* Gradients */
+.bg-gradient-to-r.from-indigo-500,
+.bg-gradient-to-b.from-indigo-500 {
+  --tw-gradient-from: var(--reason-green) !important;
+  --tw-gradient-to: var(--reason-green-light) !important;
+}
+
+/* Fix specific elements */
+#search-bar {
+  background-color: white !important;
+  color: var(--reason-text) !important;
+  border-color: #D1D5DB !important;
+}
+
+input::placeholder {
+  color: #9CA3AF !important;
+}
+
+/* Hide grid pattern in light mode as it might look dirty */
+.bg-grid-pattern {
+  opacity: 0.1 !important;
+  background-image:
+    linear-gradient(to right, #000 1px, transparent 1px),
+    linear-gradient(to bottom, #000 1px, transparent 1px) !important;
+}
+
+/* --- BUTTON FIXES --- */
+
+/* Primary & Colored Action Buttons: Ensure Text is WHITE */
+button.bg-indigo-600,
+button.bg-red-500,
+button.bg-green-600,
+.btn.bg-indigo-600,
+.bg-indigo-600.text-white,
+#upload-pdfs-btn {
+  color: white !important;
+}
+
+/* Secondary Buttons (originally gray-700): Invert to Light Gray */
+button.bg-gray-700 {
+  background-color: #F3F4F6 !important;
+  /* gray-100 */
+  border: 1px solid #D1D5DB !important;
+  /* gray-300 */
+  color: var(--reason-text) !important;
+}
+
+button.bg-gray-700:hover {
+  background-color: #E5E7EB !important;
+  /* gray-200 */
+}
+
+/* Ensure Icons inherit the text color */
+button svg,
+.btn svg {
+  color: currentColor !important;
+}
+
+/* Fix "Close" button in nav */
+#close-tool-btn.bg-gray-700 {
+  background-color: #F3F4F6 !important;
+  border: 1px solid #D1D5DB !important;
+  color: var(--reason-text) !important;
+}
+
+
+
 @theme {
   --font-sans: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
   --font-dancing: 'Dancing Script', cursive;

@@ -11,7 +11,7 @@ if (__SIMPLE_MODE__) {
     simpleFooter.innerHTML = `
       <div class="container mx-auto px-4">
         <div class="flex items-center mb-4">
-          <img src="../../images/favicon.svg" alt="PDF Tools Logo" class="h-8 w-8 mr-2">
+          <img src="../../images/Reason_Financial_Logo_2025.png" alt="PDF Tools Logo" class="h-8 w-auto mr-2">
           <span class="text-white font-bold text-lg">PDF Tools</span>
         </div>
        

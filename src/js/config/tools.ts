@@ -211,6 +211,7 @@ export const categories = [
       {
         id: 'bmp-to-pdf',
         name: 'BMP to PDF',
+        hidden: true,
         icon: 'image',
         subtitle: 'Create a PDF from one or more BMP images.',
       },
