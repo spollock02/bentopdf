@@ -42,7 +42,7 @@ describe('Tool Categories Configuration', () => {
         for (const key of ['id', 'name', 'icon', 'subtitle']) {
           const value = tool[key as keyof typeof tool];
           expect(typeof value).toBe('string');
-          expect(value.length).toBeGreaterThan(0);
+          expect((value as string).length).toBeGreaterThan(0);
         }
       });
     });

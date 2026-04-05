@@ -165,8 +165,7 @@ const init = () => {
       'grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6';
 
     category.tools.forEach((tool) => {
-      // @ts-expect-error TS(2339) FIXME: Property 'hidden' does not exist on type ...
-      if (tool.hidden) return;
+      if ('hidden' in tool && tool.hidden) return;
 
       let toolCard: HTMLDivElement | HTMLAnchorElement;
 

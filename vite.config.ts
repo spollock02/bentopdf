@@ -30,12 +30,14 @@ export default defineConfig(({ mode }) => ({
   },
   server: {
     host: true,
+    port: 5500,
     headers: {
       'Cross-Origin-Opener-Policy': 'same-origin',
       'Cross-Origin-Embedder-Policy': 'require-corp',
     },
   },
   preview: {
+    allowedHosts: ['ai.local'],
     headers: {
       'Cross-Origin-Opener-Policy': 'same-origin',
       'Cross-Origin-Embedder-Policy': 'require-corp',
